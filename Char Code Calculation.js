@@ -1,3 +1,5 @@
+//7 kyu - Char Code Calculation: https://www.codewars.com/kata/57f75cc397d62fc93d000059
+
 function calc(x){
     let sum = []; 
     let arr = x.split("");
