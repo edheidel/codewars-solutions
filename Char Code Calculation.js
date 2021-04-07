@@ -8,10 +8,8 @@ function calc(x){
     
     const total1 = sum.join('');
     const total2 = total1.split("7").join("1");
-    
     const total1Arr = total1.split("");
     const total2Arr = total2.split("");
-    
     let sumDifference = [];
     
     for (i = 0; i < total1Arr.length; i++) {
