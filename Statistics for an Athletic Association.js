@@ -30,3 +30,4 @@ function stat(strg) {
     
     return "Range: " + rangeFormatted + " Average: " + averageFormatted + " Median: " + medianFormatted
   }
+  //change
