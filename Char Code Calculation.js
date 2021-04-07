@@ -1,22 +1,22 @@
 //7 kyu - Char Code Calculation: https://www.codewars.com/kata/57f75cc397d62fc93d000059
 
 function calc(x){
-    let sum = []; 
-    let arr = x.split("");
+  let sum = []; 
+  let arr = x.split("");
     
-    for (i = 0; i < arr.length; i++) {
-      sum.push(arr[i].charCodeAt());
+  for (i = 0; i < arr.length; i++) {
+    sum.push(arr[i].charCodeAt());
   }
     
-    const total1 = sum.join('');
-    const total2 = total1.split("7").join("1");
-    const total1Arr = total1.split("");
-    const total2Arr = total2.split("");
-    let sumDifference = [];
+  const total1 = sum.join('');
+  const total2 = total1.split("7").join("1");
+  const total1Arr = total1.split("");
+  const total2Arr = total2.split("");
+  let sumDifference = [];
     
-    for (i = 0; i < total1Arr.length; i++) {
-      sumDifference.push(total1Arr[i] - total2Arr[i]);
-    }
-    
-    return sumDifference.reduce((a, b) => a + b);
+  for (i = 0; i < total1Arr.length; i++) {
+    sumDifference.push(total1Arr[i] - total2Arr[i]);
   }
+    
+  return sumDifference.reduce((a, b) => a + b);
+}
