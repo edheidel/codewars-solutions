@@ -1,17 +1,21 @@
+//6 kyu - Statistics for an Athletic Association: https://www.codewars.com/kata/55b3425df71c1201a800009c
+
 function stat(strg) {
   
   if (strg === "") {
-    return ""
+    return strg;
   }  
   
   let arr = strg.split(", ");
-  let secondsArr = []
+  let secondsArr = [];
 
   for (i = 0; i < arr.length; i++) {
-    secondsArr.push(Number(arr[i].split("|")[0]) * 60 * 60 + Number(arr[i].split("|")[1]) * 60 + Number(arr[i].split("|")[2]))
+    secondsArr.push(Number(arr[i].split("|")[0]) * 60 * 60 
+                  + Number(arr[i].split("|")[1]) * 60 
+                  + Number(arr[i].split("|")[2]));
   }
     
-  const range = Math.floor(Math.max(...secondsArr) - Math.min(...secondsArr))
+  const range = Math.floor(Math.max(...secondsArr) - Math.min(...secondsArr));
   const average = Math.floor(secondsArr.reduce((a, b) => a + b) / secondsArr.length);
   
   const median = secondsArr => {
@@ -34,7 +38,7 @@ function stat(strg) {
                             + formatter(Math.floor((average % 3600) / 60)) 
                             + "|" 
                             + formatter((average - (Math.floor(average / 3600)*3600) 
-                            - Math.floor((average % 3600) / 60) * 60))
+                            - Math.floor((average % 3600) / 60) * 60));
     
   const medianFormatted = formatter(Math.floor(median(secondsArr) / 3600)) 
                           + "|" 
@@ -42,5 +46,5 @@ function stat(strg) {
                           + "|" 
                           + formatter((median(secondsArr) - (Math.floor(median(secondsArr) / 3600)*3600) - Math.floor((median(secondsArr) % 3600) / 60) * 60));
     
-  return "Range: " + rangeFormatted + " Average: " + averageFormatted + " Median: " + medianFormatted
+  return "Range: " + rangeFormatted + " Average: " + averageFormatted + " Median: " + medianFormatted;
 }
