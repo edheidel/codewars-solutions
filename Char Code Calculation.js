@@ -20,4 +20,3 @@ function calc(x){
     
     return sumDifference.reduce((a, b) => a + b);
   }
-  //change
