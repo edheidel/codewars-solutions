@@ -4,5 +4,5 @@ function ipToInt32(ip){
     return parseInt(
         ip.split(".")
         .map(x => parseInt(x).toString(2).padStart(8, "0"))
-        .reduce((a, b) => (a + b)), 2);
+        .join(""), 2);
 }
